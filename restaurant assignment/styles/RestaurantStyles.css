@@ -1,0 +1,39 @@
+/*
+Creator: chris everhart
+Date created: 09/19/20
+Date last modified: 09/20/20
+*/
+
+
+header, footer{background-color: #006400; /*changes the header and footer to gold and green and centers the text*/
+color: #ffd700;
+height:100px;
+text-align: center;
+ padding: 30px 10px 20px 10px;}
+
+a {display: block;
+	margin:10px;
+text-align:center;
+width:120px;
+float: left;}
+
+.clear-float{clear:both;}
+	
+a:link {background-color: #008000;
+color: #daa520;}
+
+a:visited {background-color: #006400;
+color: #fffacd;}
+
+a:hover {font-weight: bold;}
+
+a:active {background-color: #ffd700;
+color: #006400;
+text-decoration: none;}
+
+footer {margin-top: 20px;} /*adds space between footer and anything above it*/
+
+h1 {font-family: roboto;} /*changes font of restaurant name from default*/
+
+
+	

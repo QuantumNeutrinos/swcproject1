@@ -2,59 +2,94 @@
 	<!--
 Name: Chris Everhart
 Date Created: 09/12/20
-Most Recent Revision: 09/12/20-->
+Most Recent Revision: 09/20/20-->
 <html lang="en">
 <head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Contact Us</title>
+<link href="bootcss/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="styles/RestaurantStyles.css" rel="stylesheet" type="text/css"/>
+<style>
+a {padding-right:20px;}
+
+.required {font-weight: bold;}
+</style>
 </head>
 
 <body>
 
 <header>
-<center><h1>Lucky's Bar & Grill</h1></center>
+<h1>Lucky's Bar & Grill</h1>
 </header>
-<hr />
+
 
 <nav>
-<p>
- <a style="padding-right:20px" href="restaurant-title.html">Home</a>
-<a style="padding-right:20px" href="restaurantMenu.html">Menu</a>
-<a style="padding-right:20px" href="restaurantContact.html">Contact Us</a>
-</p>
-<hr/>
+
+<a href="restaurant-title.html">Home</a>
+<a href="restaurantMenu.html">Menu</a>
+<a href="restaurantContact.html">Contact Us</a>
+<div class="clear-float"></div>
+
 </nav>
 <div style="text-align:center">
 <form action="request.html" method="POST">
+
+<div class="required">
 <label for="Name">Name:</label>
-<input type="text" id="Name" name="Name"> <br />
+<input type="text" id="Name" name="Name">
+</div>
+
+<div class="required">
 <label for="Email">Email:</label>
-<input type="text" id="Email" name="Email"> <br />
+<input type="text" id="Email" name="Email">
+</div>
+
+<div class="required">
 <label for="Phone">Phone:</label>
-<input type="text" id="Phone" name="Phone"> <br />
+<input type="text" id="Phone" name="Phone">
+</div>
+
+<div class="required">
 <label for="reason">Reason for Inquiry:</label>
 <select id="reason" name="reason">
 <option value="default" selected>Catering</option>
 <option value="party" selected>Private Party</option>
 <option value="feedback" selected>Feedback</option>
 <option value="other" selected>Other</option> 
-</select> <br />
+</select>
+</div>
+
+<div>
 <label for="info">Additional Information:</label>
-<textarea id="info" name="info"></textarea><br />
+<textarea id="info" name="info"></textarea>
+</div>
+
+<div>
 <label for="previous">Have you been to the restaurant before?</label>
 <input type="radio" name="answer" value="no" checked>No
-<input type="radio" name="answer" value="yes">Yes<br />
+<input type="radio" name="answer" value="yes">Yes
+</div>
+
+<div class="required">
 <label for="day">Best day to contact you:</label>
 <input type="checkbox" name="daychoice" value="monday">M
 <input type="checkbox" name="daychoice" value="tuesday">T
 <input type="checkbox" name="daychoice" value="wednesday">W
 <input type="checkbox" name="daychoice" value="thursday">Th
-<input type="checkbox" name="daychoice" value="friday">F<br />
-<input type="submit" value="Send Request"><br />
+<input type="checkbox" name="daychoice" value="friday">F
+</div>
+
+<input type="submit" value="Send Request">
 </div>
 <footer>
-<hr />
-<center><strong>Address:<strong> 2319 GoodFood Avenue, Orchard Hill, Minnesota, 56467</center>
-<center><em>Phone Number:</em> 651-YUM-FOOD</center>
+
+<p><strong>Address:<strong> 2319 GoodFood Avenue, Orchard Hill, Minnesota, 56467</p>
+<p><em>Phone Number:</em> 651-YUM-FOOD</p>
 </footer>
+
+<script src="bootjs/jquery-3.3.1.min.js"></script>
+       <script src="bootjs/popper.min.js"></script>
+       <script src="bootjs/bootstrap.min.js"></script>
 </body>
 </html>
