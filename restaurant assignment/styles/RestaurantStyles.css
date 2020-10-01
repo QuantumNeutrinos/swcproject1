@@ -1,0 +1,60 @@
+/*
+Creator: chris everhart
+Date created: 09/19/20
+Date last modified: 09/20/20
+*/
+
+
+.jumbotron, header {
+	background-color: #006400; /*changes the header to gold and green and centers the text*/
+	color: #ffd700;
+	height: 100px;
+	text-align: center;
+	padding: 30px 10px 20px 10px;
+	margin-bottom: 10px;
+}
+
+a {display: block;
+	margin:10px;
+text-align:center;
+width:120px;
+float: left;}
+
+.clear-float{clear:both;}
+	
+a:link {background-color: #008000;
+color: #daa520;}
+
+a:visited {background-color: #006400;
+color: #fffacd;}
+
+a:hover {font-weight: bold;}
+
+a:active {background-color: #ffd700;
+color: #006400;
+text-decoration: none;}
+
+footer { /*changes the footer to gold and green and centers the text*/
+	background-color: #006400;
+	margin-top: 20px; /*adds space between footer and anything above it*/
+	color: #ffd700;
+	height: 100px;
+	text-align: center;
+	padding: 30px 10px 20px 10px;
+} 
+
+h1 {font-family: roboto;} /*changes font of restaurant name from default*/
+
+.carousel-item img {
+	margin: auto;
+	display: block;
+}
+.carousel-item h4 {
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+}
+.carousel-inner h3 {
+	color: #ffd700;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+}

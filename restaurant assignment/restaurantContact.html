@@ -1,60 +1,116 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 	<!--
 Name: Chris Everhart
 Date Created: 09/12/20
-Most Recent Revision: 09/12/20-->
+Most Recent Revision: 09/30/20-->
 <html lang="en">
 <head>
-<title>Contact Us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Contact Us</title>
+    <script type="text/Javascript" src="scripts/restaurant.js" ></script>
+    <link href="bootcss/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="styles/RestaurantStyles.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <style>
+        a {
+            padding-right: 20px;
+        }
+
+        .required {
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-<center><h1>Lucky's Bar & Grill</h1></center>
-</header>
-<hr />
+    <noscript><h1>This site works best with javascript enabled!</h1></noscript>
+    <header>
+        <h1>Lucky's Bar & Grill</h1>
+    </header>
 
-<nav>
-<p>
- <a style="padding-right:20px" href="restaurant-title.html">Home</a>
-<a style="padding-right:20px" href="restaurantMenu.html">Menu</a>
-<a style="padding-right:20px" href="restaurantContact.html">Contact Us</a>
-</p>
-<hr/>
-</nav>
-<div style="text-align:center">
-<form action="request.html" method="POST">
-<label for="Name">Name:</label>
-<input type="text" id="Name" name="Name"> <br />
-<label for="Email">Email:</label>
-<input type="text" id="Email" name="Email"> <br />
-<label for="Phone">Phone:</label>
-<input type="text" id="Phone" name="Phone"> <br />
-<label for="reason">Reason for Inquiry:</label>
-<select id="reason" name="reason">
-<option value="default" selected>Catering</option>
-<option value="party" selected>Private Party</option>
-<option value="feedback" selected>Feedback</option>
-<option value="other" selected>Other</option> 
-</select> <br />
-<label for="info">Additional Information:</label>
-<textarea id="info" name="info"></textarea><br />
-<label for="previous">Have you been to the restaurant before?</label>
-<input type="radio" name="answer" value="no" checked>No
-<input type="radio" name="answer" value="yes">Yes<br />
-<label for="day">Best day to contact you:</label>
-<input type="checkbox" name="daychoice" value="monday">M
-<input type="checkbox" name="daychoice" value="tuesday">T
-<input type="checkbox" name="daychoice" value="wednesday">W
-<input type="checkbox" name="daychoice" value="thursday">Th
-<input type="checkbox" name="daychoice" value="friday">F<br />
-<input type="submit" value="Send Request"><br />
-</div>
-<footer>
-<hr />
-<center><strong>Address:<strong> 2319 GoodFood Avenue, Orchard Hill, Minnesota, 56467</center>
-<center><em>Phone Number:</em> 651-YUM-FOOD</center>
-</footer>
+
+    <nav>
+
+        <a class="btn badge-pill" href="restaurant-title.html"><i class="fa fa-home"></i></a>
+        <a class="btn badge-pill" href="restaurantMenu.html">Menu</a>
+        <a class="btn badge-pill" href="restaurantContact.html">Contact Us</a>
+        <div class="clear-float"></div>
+
+    </nav>
+    <div style="text-align:center">
+        <form name="infoRequest" onsubmit="return validateForm();">
+            <div class="form-group">
+                <div class="required">
+                    <label for="Name">Name:</label>
+                    <input type="text" id="Name" name="Name">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="required">
+                    <label for="Email">Email:</label>
+                    <input type="text" id="Email" name="Email">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="required">
+                    <label for="Phone">Phone:</label>
+                    <input type="text" id="Phone" name="Phone">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="required">
+                    <label for="reason">Reason for Inquiry:</label>
+                    <select id="reason" name="reason">
+                        <option value="default" selected>Catering</option>
+                        <option value="party" selected>Private Party</option>
+                        <option value="feedback" selected>Feedback</option>
+                        <option value="other" selected>Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div>
+                    <label for="info">Additional Information:</label>
+                    <textarea id="info" name="info"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div>
+                    <label for="previous">Have you been to the restaurant before?</label>
+                    <input type="radio" name="answer" value="no" checked>No
+                    <input type="radio" name="answer" value="yes">Yes
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="required">
+                    <label for="day">Best day to contact you:</label>
+                    <input type="checkbox" name="dayChoice" value="monday">M
+                    <input type="checkbox" name="dayChoice" value="tuesday">T
+                    <input type="checkbox" name="dayChoice" value="wednesday">W
+                    <input type="checkbox" name="dayChoice" value="thursday">Th
+                    <input type="checkbox" name="dayChoice" value="friday">F
+                </div>
+            </div>
+
+            <input type="submit" value="Send Request">
+        </form>
+    </div>
+    <footer>
+
+        <p><strong>Address:</strong> 2319 GoodFood Avenue, Orchard Hill, Minnesota, 56467</p>
+        <p><em>Phone Number:</em> 651-YUM-FOOD</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </body>
 </html>
